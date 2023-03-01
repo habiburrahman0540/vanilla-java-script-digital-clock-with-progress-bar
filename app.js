@@ -8,9 +8,9 @@ const showCountTime = ()=>{
     const countHour = date.getHours()
     const countMinute = date.getMinutes();
     const countSecond = date.getSeconds();
-    hour.innerText = countHour
-    minute.innerText = countMinute
-    second.innerText = countSecond
+    hour.innerText = countHour < 10 ? "0"+countHour : countHour
+    minute.innerText = countMinute < 10 ? "0"+countMinute : countMinute
+    second.innerText = countSecond < 10 ? "0"+countSecond : countSecond
     progressBar.style.width = (countSecond / 60) * 100 + '%'
 }
 setInterval(showCountTime,1000)
